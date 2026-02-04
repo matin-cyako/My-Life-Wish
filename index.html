@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Life & Wish</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>My Life & Wish</h1>
+  </header>
+
+  <main>
+    <section id="profile">
+      <h2>About Me</h2>
+      <p>名前:ちゃこ</p>
+      <p>出身地： 秋田</p>
+      <p>誕生日: 2月11日（建国記念日!!）</p>
+      <p>好きな動物: トラ🐯、うさぎ🐰</p>
+    </section>
+
+    <section id="oshi">
+      <h2>My Oshi</h2>
+      <ul class="oshi-list">
+        <li>
+            <span class="oshi-name">真白友也</span>
+            <span class="oshi-work">あんさんぶるスターズ！！</span>
+            <span class="oshi-point">普通に悩みながらも自分の個性、特性を伸ばし続ける努力家</span>
+        </li>
+        <li>
+            <span class="oshi-name">春川宙</span>
+            <span class="oshi-work">あんさんぶるスターズ！！</span>
+            <span class="oshi-point">人の気持ちを考えて行動できる、人を幸せにしようとする精神</span>
+        </li>
+        <li>
+            <span class="oshi-name">巴日和</span>
+            <span class="oshi-work">あんさんぶるスターズ！！</span>
+            <span class="oshi-point">こちらがどんなに落ち込んでいても絶対に明るくしてくれる言葉と歌声</span>
+        </li>
+     </ul>
+   </section>
+
+    <section id="itaba">
+      <h2>My OshiBag</h2>
+      <div class="itaba-input-form">
+         <label for="itaba-image-file" class="file-label">📸 写真を選択</label>
+          <input type="file" id="itaba-image-file" accept="image/*" style="display:none;">
+          
+          <input type="text" id="itaba-date" placeholder="製作日 (例: 2025/08/31)">
+          <input type="text" id="itaba-cost" placeholder="金額 (例: 15,000円)">
+          <textarea id="itaba-memo" placeholder="メモを入力"></textarea>
+          <button onclick="addItaba()">バッグを記録する</button>
+      </div>
+    </section>
+
+    <section id="todo">
+      <h2>Wish List</h2>
+            <div class="todo-input">
+                <input type="text" id="todo-text" placeholder="100歳までにやりたいこと">
+                <button onclick="addTodo()">追加</button>
+            </div>
+            <ul id="todo-list"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
