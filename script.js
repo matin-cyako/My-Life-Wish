@@ -52,36 +52,4 @@ function loadTodo() {
         const todos = JSON.parse(saved);
         todos.forEach(todo => createTodoItem(todo.text, todo.done));
     }
-}
-
-window.addEventListener('load', () => {
-    loadItaba();
-});
-
-function addItaba() {
-    const fileInput = document.getElementById('itaba-image-file');
-    const date = document.getElementById('itaba-date').value;
-    const cost = document.getElementById('itaba-cost').value;
-    const memo = document.getElementById('itaba-memo').value;
-
-    if (date && cost) {
-        if (fileInput.files && fileInput.files[0]) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                createItabaCard(e.target.result, date, cost, memo);
-                saveItaba();
-            };
-            reader.readAsDataURL(fileInput.files[0]);
-        } else {
-            createItabaCard("", date, cost, memo);
-            saveItaba();
-        }
-        
-        document.getElementById('itaba-date').value = '';
-        document.getElementById('itaba-cost').value = '';
-        document.getElementById('itaba-memo').value = '';
-        fileInput.value = '';
-    } else {
-        alert("日付と金額は入力してね！");
-    }
-}
+};

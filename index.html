@@ -12,12 +12,22 @@
   </header>
 
   <main>
-    <section id="profile">
+    <section id="about">
       <h2>About Me</h2>
-      <p>名前:ちゃこ</p>
-      <p>出身地： 秋田</p>
-      <p>誕生日: 2月11日（建国記念日!!）</p>
-      <p>好きな動物: トラ🐯、うさぎ🐰</p>
+      <ul class="oshi-list">
+         <li>
+            <span class="oshi-name">Name</span>
+            <span class="oshi-work">ちゃこ</span>
+        </li>
+        <li>
+            <span class="oshi-name">Birthday</span>
+            <span class="oshi-work">  2/11 (建国記念日！！)</span>
+        </li>
+        <li>
+            <span class="oshi-name">Hobby</span>
+            <span class="oshi-work">ゲーム、動画観賞、バスケ観戦</span>
+        </li>
+    </ul>
     </section>
 
     <section id="oshi">
@@ -41,16 +51,29 @@
      </ul>
    </section>
 
-    <section id="itaba">
-      <h2>My OshiBag</h2>
-      <div class="itaba-input-form">
-         <label for="itaba-image-file" class="file-label">📸 写真を選択</label>
-          <input type="file" id="itaba-image-file" accept="image/*" style="display:none;">
-          
-          <input type="text" id="itaba-date" placeholder="製作日 (例: 2025/08/31)">
-          <input type="text" id="itaba-cost" placeholder="金額 (例: 15,000円)">
-          <textarea id="itaba-memo" placeholder="メモを入力"></textarea>
-          <button onclick="addItaba()">バッグを記録する</button>
+   <section id="itaba">
+    <h2>My OshiBag & Gallery</h2>
+    <div class="itaba-grid">
+        <div class="itaba-card">
+            <div class="itaba-image">
+                <img src="c:\Users\asako\Downloads\Phone Link\IMG_3425.jpg" alt="痛バッグの写真">
+            </div>
+            <div class="itaba-info">
+                <p class="oshi-work"> 2025/11/23 製作</p>
+                <p class="oshi-work"> 約82000円</p>
+            </div>
+        </div>
+
+        <div class="itaba-card">
+            <div class="itaba-image">
+                <img src="c:\Users\asako\Downloads\Phone Link\IMG_3426.jpg" alt="痛バッグの写真">
+            </div>
+            <div class="itaba-info">
+                <p class="oshi-work">2025/11/24</p>
+                <p class="oshi-work">約50000円</p>
+                <p class="oshi-work">念願の絵柄で組めた！！</p>
+            </div>
+        </div>
       </div>
     </section>
 
