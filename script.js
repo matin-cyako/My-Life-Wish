@@ -88,3 +88,23 @@ function showFlower() {
 window.onload = function() {
     showFlower();
 };
+
+const rabbitTrivia = [
+    "うさぎの耳は、体温を調節するラジエーターのような役割も持っています。",
+    "うさぎが鼻をヒクヒクさせるのは、匂いを嗅ぐためだけでなく感情表現でもあります。",
+    "うさぎは嬉しいとき、空中でひねりジャンプ（ひねり跳び）をすることがあります。",
+    "うさぎの歯は一生伸び続けます。なので、牧草を食べて削る必要があります。",
+    "うさぎの視野は約360度！ 真後ろまで見ることができちゃうんです。",
+    "うさぎが顔を洗う仕草は「ティモテ」と呼ばれて親しまれています。",
+    "うさぎは実は鼻呼吸が基本。口で呼吸するのはとっても珍しいんです。",
+    "うさぎの足の裏には肉球がなく、モフモフの毛で覆われています。"
+];
+
+function showRabbitTrivia() {
+    const randomIdx = Math.floor(Math.random() * rabbitTrivia.length);
+    document.getElementById('trivia-text').textContent = rabbitTrivia[randomIdx];
+}
+window.onload = function() {
+    if (typeof showFlower === 'function') showFlower();
+    showRabbitTrivia(); 
+};

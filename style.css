@@ -283,3 +283,13 @@ button:hover {
 #flower-meaning {
     color: #666; 
 }
+
+#rabbit-trivia {
+    text-align: center;
+    background: #fffefe;
+    padding: 20px;
+    margin: 20px 0;
+    border: 3px dashed #ffc0cb; 
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(255, 192, 203, 0.3);
+}
