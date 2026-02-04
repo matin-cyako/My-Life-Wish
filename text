@@ -1,0 +1,61 @@
+let currentStep = "start";
+
+const quizData = {
+    "start": {
+        question: "今の気分はどっち？",
+        yes: "upbeat",
+        no: "chill"
+    },
+    "upbeat": {
+        question: "洋風？和風？",
+        yes: "eden",
+        no: "akatuki" 
+    },
+    "chill": {
+        question: "魔法使い？うさぎ？",
+        yes: "switch",  
+        no: "rabits" 
+    }
+};
+
+const results = {
+    "eden":{
+      text: "おすすめはEdenの『Awakening Myth』！",
+        videoId: "S9Iv6BLlUxiC8ARc"
+    },
+    "akatuki": {
+        text: "S9Iv6BLlUxiC8ARc",
+        videoId: "XkOdiE7Tvoxw6wwl" 
+    },
+    "switch":{
+        text: "XkOdiE7Tvoxw6wwl",
+        videoId: "wk5yhH2ZdoIM-UV_" 
+    },
+    "rabits":{
+        text: "おすすめはRa*bitsの『Dream Collection』！",
+        videoId: "t6B_89aKqHXFGVrV" 
+    },
+};
+
+function nextQuestion(choice) {
+    const stepData = quizData[currentStep];
+    currentStep = stepData[choice];
+
+    if (results[currentStep]) {
+      const res = results[currentStep];
+        document.getElementById('quiz-container').innerHTML = `
+            <p>結果</p>
+            <h3>${res.text}</h3>
+            <div class="video-container">
+                <iframe width="100%" height="315" 
+                    src="https://www.youtube.com/embed/${res.videoId}"
+                    frameborder="0" allowfullscreen>
+                </iframe>
+            </div>
+            <button onclick="location.reload()" style="margin-top:20px;">もう一度診断する</button>
+        `;
+    } else {
+        const nextData = quizData[currentStep];
+        document.getElementById('question-text').textContent = nextData.question;
+    }
+}
